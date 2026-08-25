@@ -14,7 +14,7 @@ const Heading = () => {
           </p>
         </div>
         <div className="w-1/2 flex justify-center h-1/2">
-          <img src="./public/food.jpg" alt="" className="w-1/2 rounded-2xl" />
+          <img src="/food.jpg" alt="" className="w-1/2 rounded-2xl" />
         </div>
       </div>
       <div className="">
