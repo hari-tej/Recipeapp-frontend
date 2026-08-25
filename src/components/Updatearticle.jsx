@@ -19,7 +19,7 @@ const Updatearticle = () => {
   const [type, setType] = useState("");
   const [procedure, setProcedure] = useState("");
 
-  const [url, setUrl] = useState("../public/blank.png");
+  const [url, setUrl] = useState("/blank.png");
 
   const navigate = useNavigate();
   const token=localStorage.getItem("token");
@@ -33,7 +33,7 @@ const Updatearticle = () => {
         toast.error("select an image");
         return;
       }
-      setUrl("../public/loading.webp");
+      setUrl("/loading.webp");
       const data = new FormData();
       data.append("file", img);
       data.append("upload_preset", "recipe-images");
@@ -90,7 +90,7 @@ const Updatearticle = () => {
          setProcedure("");
          setSpice("");
          setType("");
-         setUrl("../public/blank.png");
+         setUrl("/blank.png");
          setTimeout(()=>{
               navigate("/home");
          },1000)

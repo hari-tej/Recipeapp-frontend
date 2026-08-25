@@ -25,7 +25,7 @@ const Contribute = () => {
   const[data,setData]=useState([])
   const[favourites,setFavourites]=useState([])
 
-  const [url, setUrl] = useState("./public/blank.png");
+  const [url, setUrl] = useState("/blank.png");
   const navigate=useNavigate();
   const token=localStorage.getItem("token")
 
@@ -91,7 +91,7 @@ const Contribute = () => {
       toast.error("select an image")
       return
     }
-    setUrl("./public/loading.webp");
+    setUrl("/loading.webp");
     const data=new FormData()
     data.append("file",img)
     data.append("upload_preset", "recipe-images");
@@ -148,7 +148,7 @@ const Contribute = () => {
          setProcedure("");
          setSpice("");
          setType("");
-         setUrl("./public/blank.png");
+         setUrl("/blank.png");
          setInterval(()=>{
               navigate("/home");
          },1000)
